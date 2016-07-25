@@ -55,7 +55,7 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 //* Unregister secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
 
-//* Unregister secondary sidebar 
+//* Unregister secondary sidebar
 add_action( 'genesis_sidebar_alt', 'genesis_do_sidebar_alt' );
 
 //* Add custom body class to the head
@@ -92,10 +92,10 @@ function beautiful_site_header_banner() {
 //* Hook site header banner after header
 add_action( 'genesis_after_header', 'homepage_slideshow' );
 function homepage_slideshow() {
-	
+
 		if ( ! is_front_page() )
 		return;
-	
+
 	genesis_widget_area( 'homepage-slideshow', array(
 		'before' => '<div class="homepage-slideshow" class="widget-area">',
 		'after'  => '</div>',
@@ -148,7 +148,7 @@ function beautiful_remove_more() {
 //* Remove entry meta in entry footer
 add_action( 'genesis_before_entry', 'beautiful_remove_entry_meta' );
 function beautiful_remove_entry_meta() {
-	
+
 	//* Remove if not single post
 	if ( ! is_single() ) {
 		remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
