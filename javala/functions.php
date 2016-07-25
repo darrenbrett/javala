@@ -6,7 +6,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
 //* Set Localization (do not remove)
-load_child_theme_textdomain( 'beautiful', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'beautiful' ) );
+load_child_theme_textdomain( 'beautiful', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'javala' ) );
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Javala', 'javala' ) );
