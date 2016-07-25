@@ -1,8 +1,8 @@
 <?php
 
-//* Beautiful Theme Setting Defaults
-add_filter( 'genesis_theme_settings_defaults', 'beautiful_theme_defaults' );
-function beautiful_theme_defaults( $defaults ) {
+//* javala Theme Setting Defaults
+add_filter( 'genesis_theme_settings_defaults', 'javala_theme_defaults' );
+function javala_theme_defaults( $defaults ) {
 
 	$defaults['blog_cat_num']              = 4;
 	$defaults['content_archive']           = 'full';
@@ -16,9 +16,9 @@ function beautiful_theme_defaults( $defaults ) {
 
 }
 
-//* Beautiful Theme Setup
-add_action( 'after_switch_theme', 'beautiful_theme_setting_defaults' );
-function beautiful_theme_setting_defaults() {
+//* javala Theme Setup
+add_action( 'after_switch_theme', 'javala_theme_setting_defaults' );
+function javala_theme_setting_defaults() {
 
 	if( function_exists( 'genesis_update_settings' ) ) {
 
@@ -51,15 +51,15 @@ function beautiful_theme_setting_defaults() {
 }
 
 //* Simple Social Icon Defaults
-add_filter( 'simple_social_default_styles', 'beautiful_social_default_styles' );
-function beautiful_social_default_styles( $defaults ) {
+add_filter( 'simple_social_default_styles', 'javala_social_default_styles' );
+function javala_social_default_styles( $defaults ) {
 
 	$args = array(
 		'alignment'              => 'aligncenter',
-		'background_color'       => '#eeeeee',
-		'background_color_hover' => '#e5554e',
+		'background_color'       => '#594642',
+		'background_color_hover' => '#7e645f',
 		'border_radius'          => 3,
-		'icon_color'             => '#333333',
+		'icon_color'             => '#f1f1f1',
 		'icon_color_hover'       => '#ffffff',
 		'size'                   => 36,
 	);

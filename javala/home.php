@@ -2,7 +2,7 @@
 /**
  * This file adds the Landing template to the Javala Theme.
  *
- * @author Pixelcurb
+ * @author Darren King
  * @package Javala
  * @subpackage Customizations
 */

@@ -2,7 +2,7 @@
 /**
  * This file adds the Landing template to the Javala theme.
  *
- * @author Pixelcurb
+ * @author Darren King
  * @package Javala
  * @subpackage Customizations
 */
@@ -12,10 +12,10 @@ Template Name: Landing
 */
 
 //* Add landing body class to the head
-add_filter( 'body_class', 'beautiful_add_body_class' );
-function beautiful_add_body_class( $classes ) {
+add_filter( 'body_class', 'javala_add_body_class' );
+function javala_add_body_class( $classes ) {
 
-	$classes[] = 'beautiful-landing';
+	$classes[] = 'javala-landing';
 	return $classes;
 
 }
@@ -24,7 +24,7 @@ function beautiful_add_body_class( $classes ) {
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 
 //* Remove before header widget area above header
-remove_action( 'genesis_before_header', 'beautiful_before_header' );
+remove_action( 'genesis_before_header', 'javala_before_header' );
 
 //* Remove site header elements
 remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
@@ -36,7 +36,7 @@ remove_action( 'genesis_after_header', 'genesis_do_nav' );
 remove_action( 'genesis_after_header', 'genesis_do_subnav', 15 );
 
 //* Remove site header banner
-remove_action( 'genesis_after_header', 'beautiful_site_header_banner' );
+remove_action( 'genesis_after_header', 'javala_site_header_banner' );
 
 //* Remove breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );

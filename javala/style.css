@@ -2,12 +2,11 @@
 	Theme Name: Javala
 	Theme URI: http://cmsthemefactory.com/themes/javala
 	Description: A Genesis framework mobile responsive and HTML5 theme built for coffee shops
-	Author: Pixelcurb
+	Author: Darren King
 	Author URI: http://cmsthemefactory.com
 	Template: genesis
-	Template Version: 2.1
-	Tags: black, blue, gray, white, one-column, two-columns, responsive-layout, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
-	Template Version: 1.0
+	Tags: brown, dark grey, one-column, two-columns, responsive-layout, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
+	Template Version: 1.1
 */
 
 
@@ -56,6 +55,8 @@
 	- Sidebar
 	- Footer Widgets
 	- Site Footer
+	- Additional Misc. Classes 
+	- Specials
 	- Media Queries
 		- max-width: 1139px
 		- max-width: 1023px
@@ -213,7 +214,7 @@ hr {
 	font-size: 24px;
 	font-weight: 700;
 	text-align: center;
-	margin: 0 0 10px 0;
+	margin-bottom: 10px;
 }
 
 p {
@@ -263,7 +264,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #67bdbf;
+	color: #fff;
 	font-weight: 500;
 	line-height: 1.2;
 	margin: 0 0 16px;
@@ -499,7 +500,7 @@ Structure and Layout
 	max-width: 1140px;
 }
 
-.beautiful-landing .site-inner {
+.javala-landing .site-inner {
 	max-width: 800px;
 }
 
@@ -514,7 +515,7 @@ Structure and Layout
 /* Content */
 
 .content {
-	background: #321b13;
+	background-color: #321b13;
 	float: right;
 	padding: 20px 20px;
 	width: 720px;
@@ -541,8 +542,11 @@ Structure and Layout
 /* Sidebar */
 
 .sidebar {
+	background-color: #321b13;
+	padding: 20px;
 	float: right;
 	width: 360px;
+	border: #745c57 1px solid;
 }
 
 .sidebar-content .sidebar {
@@ -845,7 +849,7 @@ Widgets
 }
 
 .widget li li {
-	margin: 0 0 0 40px;
+	margin-left: 40px;
 }
 
 .widget ul > li:last-child,
@@ -930,8 +934,255 @@ Plugins
 
 #genesis-responsive-slider {
 	margin: 0 auto;
-	padding: 10px;
+	padding: 0px;
 	position: relative;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #ccc;
+}
+
+.genesis-responsive-slider-wrap {
+	clear: both;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+}
+
+#slides {
+	float: left;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.slide-excerpt {
+	background-color: #000;
+	filter: alpha(opacity=80);
+	display: block;
+	margin: 0px;
+	margin-bottom: 40px;
+	opacity: 0.8;
+	width: 100%;
+	padding: 0;
+	position: absolute;
+	z-index: 8;
+}
+
+.slide-excerpt-border {
+	text-align: center;
+}
+
+html > body .slide-excerpt-border {
+	background: none;
+	display: inline;
+	margin: 10px;
+	padding: 14px;
+	position: relative;
+	z-index: 8;
+}
+
+.slide-image {
+	overflow: hidden;
+}
+
+/*
+ * jQuery FlexSlider v1.8
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active {
+	outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+	list-style: none;
+	margin: 0; 
+	padding: 0; 
+} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {
+	margin: 0; 
+	padding: 0;
+	width: 100%; 
+}
+
+.flexslider .slides > li {
+	display: none;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flexslider .slides img {
+	display: block;
+	max-width: 100%; 
+}
+
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.slides:after {
+	clear: both;
+	content: "."; 
+	display: block; 
+	height: 0;  
+	line-height: 0; 
+	visibility: hidden;
+} 
+
+html[xmlns] .slides {
+	display: block;
+} 
+
+* html .slides {
+	height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+	display: block;
+}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+	background-color: #fff; 
+	position: relative; 
+	zoom: 1;
+}
+
+.flexslider .slides {
+	zoom: 1;
+}
+
+.flexslider .slides > li {
+	position: relative;
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {
+	zoom: 1; 
+	position: relative;
+}
+
+/* Caption style */
+/* IE rgba() hack */
+.flex-caption {
+	background: none; 
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); 
+	zoom: 1;
+}
+
+.flex-caption {
+	background: rgba(0,0,0,.3);
+	bottom: 0; 
+	color: #fff; 	 
+	font-size: 14px;
+	left: 0; 
+	line-height: 18px;
+	padding: 2%; 
+	position: absolute;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+	width: 96%;
+}
+
+/* Direction Nav */
+.flex-direction-nav li a {
+	width: 52px; 
+	height: 52px; 
+	margin: -20px 0 0; 
+	display: block; 
+	background: url(images/bg_direction_nav.png) no-repeat 0 0; 
+	position: absolute; 
+	top: 50%; 
+	cursor: pointer; 
+	text-indent: -9999px; 
+	z-index: 100;
+}
+
+.flex-direction-nav li .next {
+	background-position: -52px 0; 
+	right: -60px;
+}
+
+.flex-direction-nav li .next:hover {
+	background-position: -52px -50px; 
+}
+
+.flex-direction-nav li .prev {
+	left: -60px;
+}
+
+.flex-direction-nav li .prev:hover {
+	background-position: 0 -50px;
+}
+
+.flex-direction-nav li .disabled { 	 
+	cursor: default;
+	filter:alpha(opacity=30);
+	opacity: .3;
+}
+
+/* Control Nav */
+.flex-control-nav {
+	float: left;
+	margin: 20px 0 10px;
+	position: relative; 
+	text-align: center; 
+	width: 100%;
+	z-index: 100;
+}
+
+.flex-control-nav li {
+	*display: inline;
+	display: inline-block;
+	margin-left: 5px;  
+	zoom: 1;
+}
+
+.flex-control-nav li:first-child {
+	margin: 0;
+}
+
+.flex-control-nav li a {	 
+	background: url(images/bg_control_nav.png) no-repeat 0 0; 
+	cursor: pointer; 
+	display: block;
+	height: 13px;
+	text-indent: -9999px;
+	width: 13px;
+}
+
+.flex-control-nav li a:hover {
+	background-position: 0 -13px;
+}
+
+.flex-control-nav li a.active {
+	background-position: 0 -26px; 
+	cursor: default;
 }
 
 /* Genesis Latest Tweets
@@ -990,11 +1241,11 @@ Site Header
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header .wrap {
-	background: #321b13;
+	background-color: #321b13;
 	padding: 40px 0;
 }
 
-.beautiful .site-header-banner {
+.javala .site-header-banner {
 	height: 120px;
 	display: none;
 }
@@ -1018,7 +1269,7 @@ Site Header
 
 .site-title a,
 .site-title a:hover {
-	color: #333;
+	color: #fff;
 }
 
 .site-description {
@@ -1088,7 +1339,7 @@ Site Navigation
 }
 
 .genesis-nav-menu a {
-	background: #321b13;
+	background-color: #321b13;
 	color: #d8d8d8;
 	display: block;
 	font-size: 16px;
@@ -1104,7 +1355,7 @@ Site Navigation
 }
 
 .current-menu-item {
-	background: #594642;
+	background-color: #594642;
 	border-bottom: #876b68 2px solid;
 }
 
@@ -1117,7 +1368,7 @@ Site Navigation
 }
 
 .genesis-nav-menu .sub-menu {
-	background: #21150f;
+	background-color: #21150f;
 	left: -9999px;
 	opacity: 8;
 	position: absolute;
@@ -1234,7 +1485,7 @@ Content Area
 --------------------------------------------- */
 
 .welcome-message {
-	background: #2c1d18;
+	background-color: #2c1d18;
 	padding: 20px;
     border: #38281f 1px solid;
     margin-bottom: 30px;
@@ -1280,7 +1531,7 @@ Content Area
 	padding: 0;
 }
 
-.page.beautiful-landing .entry {
+.page.javala-landing .entry {
 	margin-bottom: 0;
 }
 
@@ -1490,7 +1741,7 @@ Sidebar
 }
 
 .split-sidebars .widget li li {
-	margin: 0 0 0 20px;
+	margin-left: 20px;
 }
 
 .split-sidebar-left,
@@ -1519,7 +1770,7 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background: #1b100e;
+	background-color: #1b100e;
 	clear: both;
 	padding: 60px 0 20px;
 	border-top: #2c1d18 1px solid;
@@ -1556,12 +1807,35 @@ Footer Widgets
 	word-wrap: break-word;
 }
 
+.footer-widgets .widget_dpe_fp_widget a {
+	float: right;
+}
+
+.footer-widgets .widget_dpe_fp_widget li:before {
+	font-family: "dashicons";
+	content: "\f323";
+	color: #f15123;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 20px/1;
+	vertical-align: top;
+	margin-right: 5px;
+	margin-right: 0.5rem;
+}
+
+
+.footer-widgets .widget_dpe_fp_widget li {
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	word-wrap: break-word;
+}
+
 .footer-widgets li li {
 	border-bottom: none;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
-
 
 /*
 Site Footer
@@ -1571,7 +1845,7 @@ Site Footer
 	font-size: 16px;
 	padding: 40px 0;
 	text-align: center;
-	background: #110e0c;
+	background-color: #110e0c;
 }
 
 .site-footer a {
@@ -1596,7 +1870,46 @@ Site Footer
 	margin: 0 auto;
 }
 
-/* Additional Classes 
+/* Specials Classes 
+--------------------------------------------- */
+
+.specials-featured-image {
+	padding: 0;
+}
+
+.javala-specials {
+	color: #fff;
+}
+
+.specials .entry-title:before {
+	font-family: "dashicons";
+	content: "\f323";
+	color: #f15123;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 20px/1;
+	vertical-align: top;
+	margin-right: 5px;
+	margin-right: 0.5rem;
+}
+
+.cpt-archive, .archive-title {
+	background-color: #683e37;
+	border: #ac685c 1px dotted;
+	font-size: 40px;
+	text-align: center;
+}
+
+.specials .entry-title {
+    font-size: 30px;
+    font-weight: 400;
+    color: #d8d8d8;
+    border-bottom: none;
+    padding-bottom: 3px;
+}
+
+
+/* Additional Misc. Classes 
 --------------------------------------------- */
 .btn-link {
 	color: #d8d8d8;
@@ -1643,7 +1956,7 @@ Media Queries
 
 @media only screen and (max-width: 1023px) {
 
-	.beautiful-landing .site-inner,
+	.javala-landing .site-inner,
 	.site-inner,
 	.wrap {
 		max-width: 768px;
@@ -1724,7 +2037,7 @@ Media Queries
 	}
 	
 	.current-menu-item {
-		background: #594642;
+		background-color: #594642;
 	}
 	
 	.genesis-nav-menu.responsive-menu .menu-item-has-children {
